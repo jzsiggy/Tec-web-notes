@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 
-<%@ page
-	import="java.util.*,br.edu.insper.model.*, br.edu.insper.controller.*"%>
+<%@ page import="java.util.*,br.edu.insper.joaoz.model.*,br.edu.insper.joaoz.controller.*"%>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css" />
 <title>Edite sua anotação</title>

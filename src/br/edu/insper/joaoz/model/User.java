@@ -1,4 +1,4 @@
-package br.edu.insper.model;
+package br.edu.insper.joaoz.model;
 
 public class User {
 	private Integer id;

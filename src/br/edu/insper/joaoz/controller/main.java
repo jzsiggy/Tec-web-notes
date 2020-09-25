@@ -1,4 +1,4 @@
-package br.edu.insper.controller;
+package br.edu.insper.joaoz.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.edu.insper.model.DAO;
-import br.edu.insper.model.Note;
-import br.edu.insper.model.User;
+import br.edu.insper.joaoz.model.DAO;
+import br.edu.insper.joaoz.model.Note;
+import br.edu.insper.joaoz.model.User;
 
 /**
  * Servlet implementation class main
@@ -36,9 +36,8 @@ public class main extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		DAO dao = new DAO();
 		
-		Integer user_id = Integer.parseInt(request.getParameter("user_id"));
+		Integer id = Integer.parseInt(request.getParameter("user_id"));
 		String userName = request.getParameter("userName");
 		
 		String busca = request.getParameter("textBusca");
@@ -49,7 +48,7 @@ public class main extends HttpServlet {
 
 		
 		User user = new User();
-		user.setId(user_id);
+		user.setId(id);
 		user.setName(userName);
 		
 		request.setAttribute("user", user);
@@ -110,10 +109,7 @@ public class main extends HttpServlet {
 			System.out.println(status.contentEquals("editado"));
 			if (status.contentEquals("editing")) {
 			
-				String userName = request.getParameter("userName");
-				int user_id = Integer.parseInt(request.getParameter("user_id"));
 				note_id = Integer.parseInt(request.getParameter("note_id"));
-				String text = request.getParameter("text");
 				
 				RequestDispatcher  dispathcer = request.getRequestDispatcher("view/edit.jsp");
 				dispathcer.forward(request, response);

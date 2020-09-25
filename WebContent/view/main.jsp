@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ page
-	import="java.util.*, br.edu.insper.model.*, br.edu.insper.controller.*"%>
+<%@ page import="java.util.*,br.edu.insper.joaoz.model.*,br.edu.insper.joaoz.controller.*"%>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/view/style.css" />
 <title>Notas</title>
