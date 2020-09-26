@@ -43,7 +43,6 @@ public class main extends HttpServlet {
 		String busca = request.getParameter("textBusca");
 		Integer imp = Integer.parseInt(request.getParameter("imp"));
 
-		System.out.println("entramos no order");
 		request.setAttribute("imp", imp);
 
 		
@@ -103,10 +102,7 @@ public class main extends HttpServlet {
 		else if (action.contentEquals("edit")) {
 			String status = request.getParameter("status");
 			Integer note_id = null;
-			
-			System.out.println(status);
-			System.out.println(status.contentEquals("editing"));
-			System.out.println(status.contentEquals("editado"));
+
 			if (status.contentEquals("editing")) {
 			
 				note_id = Integer.parseInt(request.getParameter("note_id"));

@@ -63,7 +63,6 @@ public class DAO {
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -96,17 +95,17 @@ public class DAO {
 					}
 					rs.close();
 					stmt.close();
-				}catch (SQLException e) {
+				} catch (SQLException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 				}
 	
-			}else {
+			} else {
 				if (imp==2) {
 					query = "SELECT * FROM Note "
 							+ "WHERE user_id=? "
 							+ "ORDER BY importance DESC;";
-				}else {
+				} else {
 					query = "SELECT * FROM Note "
 							+ "WHERE user_id=? "
 							+ "ORDER BY importance ASC;";
